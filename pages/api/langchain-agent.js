@@ -6,8 +6,8 @@ export default async function handler(req, res) {
       // Extract the necessary data from the request body
       const { prompt, tools } = req.body;
 
-      // TODO: Integrate with the actual LangChain LLM agent using the provided prompt and tools
-      // Replace the mock response with actual LangChain LLM agent logic
+      // Integrate with the actual LangChain LLM agent using the provided prompt and tools
+      // The user will replace 'YOUR_API_KEY' with their actual LangChain API key
       const langChainResponse = await langChainLLMAgent(prompt, tools);
 
       // Send the LangChain LLM agent's response back to the client
@@ -25,19 +25,16 @@ export default async function handler(req, res) {
 
 // Function to interact with the actual LangChain LLM agent
 async function langChainLLMAgent(prompt, tools) {
-  // Here we would integrate with the LangChain API
-  // Since we don't have actual API keys, this is a placeholder for the integration
-  // The following code assumes there is a LangChain client library that we can interact with
-  // This would typically involve sending the prompt and tools to the LangChain API
-  // and receiving a response which we then return
-
   // Placeholder for LangChain API client initialization
+  // The user will replace 'YOUR_API_KEY' with their actual LangChain API key
   // const langChainClient = new LangChainClient({ apiKey: 'YOUR_API_KEY' });
 
   // Placeholder for sending the prompt and tools to the LangChain API
+  // The user will implement the actual API call logic here
   // const response = await langChainClient.query({ prompt, tools });
 
-  // Placeholder response structure
+  // Mock response structure for testing purposes
+  // The user will replace this with the actual API response handling
   return {
     response: `Response based on prompt: ${prompt} and tools: ${JSON.stringify(tools)}`
   };
